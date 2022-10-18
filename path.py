@@ -33,7 +33,7 @@ def isUniqueNames(path: str, names: list | KeysView) -> None:
                             f'По пути {path} содержатся файлы со следующими именами: {names}')
 
 
-def finderPath(path: str, X: dict) -> str:
+def finderPath(path: str, X: dict | list) -> str:
     isUniqueNames(path, X.keys() if isinstance(X, dict) else X)
 
     biggest_path = path
